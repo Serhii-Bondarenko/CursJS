@@ -167,18 +167,10 @@ btn9.onclick = function f9() {
 
 //10. Дан select .s-100. По нажатию кнопки, выведите value выбранного option в .out-10.
 
-let select100 = document.querySelector('.s-100 ');
-let out10=document.querySelector('.out-10 ');
-let selIndex = select100.options.selectedIndex;
-let valIndex = select100.options[index].value;
-let btnS = document.querySelector('.b-s ');
-//test
-btnS.onclick = function select(){
-    let value10 = +select100.value;
-    if (value10 == 1) {
-        out9.innerHTML = 2;
-    } else {
-        console.log(10);
-    }
+function myFunction() {
+    let value100 = document.getElementById("s-100").value;
+    document.getElementById("out-10").innerHTML =value100;
 }
+
+//11.
 
