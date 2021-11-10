@@ -4,9 +4,17 @@
 // ***_***_***_
 // </pre>
 // <p>где звездочкa рисуются с помощью внутреннего цикла от 0 до 3, а _ с помощью внешнего.</p>
-32131231
-function t1() {
 
+function t1() {
+    let out = '';
+    let out1 = document.querySelector('.out-1 ');
+    for (let i = 0; i<3; i++){
+        for (let j = 1; j <= 3; j++){
+            out += '*';
+        }
+        out += '_';
+    }
+    out1.innerHTML = out;
 }
 
 document.querySelector('.b-1').onclick = t1;
@@ -21,7 +29,15 @@ document.querySelector('.b-1').onclick = t1;
 // *_*_*_
 // <p>Решить задачу с помощью вложенных циклов. Внешний цикл выводит цифру и перенос строки br, внутренний - *_, и после этого внешний - знак переноса.</p>
 function t2() {
-
+    let out = '';
+    let out2 = document.querySelector('.out-2 ');
+    for (let i=1; i <= 3; i++ ) {
+        for (let j = 1; j <= 3; j++) {
+            out += '*_';
+        }
+        out += `${i}<br>`;
+    }
+    out2.innerHTML = out;
 }
 
 document.querySelector('.b-2').onclick = t2;
@@ -36,9 +52,16 @@ document.querySelector('.b-2').onclick = t2;
 
 // <p>Решить задачу с помощью вложенных циклов. Внутренний цикл выводит *_,  внешний цикл выводит перенос строки br.</p>
 function t3() {
-
+    let out = '';
+    let out3 =document.querySelector('.out-3 ');
+    for (let i = 1; i <= 4; i++){
+        for (let j = 1; j <= 3; j++ ){
+            out += '*_';
+        }
+        out += '<br>';
+    }
+    out3.innerHTML = out;
 }
-
 document.querySelector('.b-3').onclick = t3;
 
 //  Task 4
@@ -46,7 +69,15 @@ document.querySelector('.b-3').onclick = t3;
 // 1_1*2*3*4*5*2_1*2*3*4*5*3_1*2*3*4*5*
 // Внешний цикл выводит цифру и _, а внутренний выводит от 1 до 5 с *
 function t4() {
-
+    let out = '';
+    let out4 = document.querySelector('.out-4 ');
+    for (let i = 1; i <= 3; i++){
+        for (let j = i; j <= 5; j++){
+            out += j + '*';
+        }
+        out += ` ${i}_`;
+    }
+    out4.innerHTML = out;
 }
 
 document.querySelector('.b-4').onclick = t4;
@@ -61,7 +92,19 @@ document.querySelector('.b-4').onclick = t4;
 
 // <p>Вложенный цикл в зависимости от четного или нет k (счетчика цикла) рисует или 0 или 1. Внешний цикл - br.</p>
 function t5() {
-
+    let out = '';
+    let out5 = document.querySelector('.out-5 ');
+    for (let i = 1; i <= 3; i++){
+        for (let j = 1; j <= 6; j++){
+            if (j%2==0) {
+                out += 0;
+            } else {
+                out += 1;
+            }
+        }
+        out += '<br>';
+    }
+    out5.innerHTML = out;
 }
 
 document.querySelector('.b-5').onclick = t5;
@@ -76,7 +119,15 @@ document.querySelector('.b-5').onclick = t5;
 
 
 function t6() {
-
+    let out = '';
+    let out6 = document.querySelector('.out-6 ');
+    for (let i = 1; i <= 3; i++){
+        for (let j = 1; j < 2; j++){
+            out += `${j}${j*0}x${j*0}${j}x`;
+        }
+        out += '<br>';
+    }
+    out6.innerHTML = out;
 }
 
 document.querySelector('.b-6').onclick = t6;
@@ -91,7 +142,15 @@ document.querySelector('.b-6').onclick = t6;
 // ****
 
 function t7() {
-
+    let out = '';
+    let out7 = document.querySelector('.out-7 ');
+    for (let i = 1; i <= 4; i++){
+        for (let j = 1; j <= i; j++){
+            out += '*';
+        }
+        out += '<br>';
+    }
+    out7.innerHTML = out;
 }
 
 document.querySelector('.b-7').onclick = t7;
@@ -108,7 +167,15 @@ document.querySelector('.b-7').onclick = t7;
 // *
 
 function t8() {
-
+    let out = '';
+    let out8 = document.querySelector('.out-8 ');
+    for (let i = 1; i <= 5; i++){
+        for (let j = i; j <= 5; j++){
+            out += '*';
+        }
+        out += '<br>';
+    }
+    out8.innerHTML = out;
 }
 
 document.querySelector('.b-8').onclick = t8;
@@ -124,6 +191,15 @@ document.querySelector('.b-8').onclick = t8;
 // 1_2_3_4_5_
 
 function t9() {
+    let out = '';
+    let out9 = document.querySelector('.out-9 ');
+    for (let i = 1; i <= 5; i++){
+        for (let j = 1; j <= i; j++){
+            out += `${j}_`;
+        }
+        out += '<br>';
+    }
+    out9.innerHTML = out;
 
 }
 
@@ -141,7 +217,15 @@ document.querySelector('.b-9').onclick = t9;
 
 
 function t10() {
-
+    let out = '';
+    let out10 = document.querySelector('.out-10 ');
+    for (let i = 1; i <= 5; i++){
+        for (let j = 1; j <= 10; j++ ){
+            out += j + ' ' ;
+        }
+        out += '<br>'
+    }
+    out10.innerHTML = out;
 }
 
 document.querySelector('.b-10').onclick = t10;
