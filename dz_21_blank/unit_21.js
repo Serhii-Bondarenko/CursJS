@@ -43,7 +43,7 @@ document.querySelector('.div-3_2').addEventListener('touchstart', () => {
 
 function b() {
     document.querySelector('.out-4').innerHTML += 'touch '
-};
+}
 
 function t4() {
 
